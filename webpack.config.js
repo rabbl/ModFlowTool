@@ -13,7 +13,7 @@ const plugins = [
       from: './images',
       to: 'images'
     }, {
-      from: '../node_modules/leaflet/dist/images',
+      from: '../node_modules/leaflet/docs/images',
       to: 'images'
     }
   ]),
@@ -29,7 +29,7 @@ module.exports = {
   entry: ['./less/main.less', './js/client.js'],
   output: {
     publicPath: '/', //important for hot module replacement in conjunction with --content-base it has to equal path
-    path: path.join(__dirname, 'dist/'),
+    path: path.join(__dirname, 'docs/'),
     filename: "js/client.min.js",
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js',
@@ -41,7 +41,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: [
           path.resolve(__dirname, "node_modules"),
-          path.resolve(__dirname, "dist")
+          path.resolve(__dirname, "docs")
         ],
         /*include: [
           path.resolve(__dirname, "src/js"),
